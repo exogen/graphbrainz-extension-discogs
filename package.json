@@ -1,0 +1,122 @@
+{
+  "name": "graphbrainz-extension-discogs",
+  "version": "1.0.0",
+  "description": "Discogs GraphQL extension for GraphBrainz.",
+  "keywords": [
+    "graphbrainz",
+    "extension",
+    "musicbrainz",
+    "graphql",
+    "discogs"
+  ],
+  "homepage": "https://github.com/exogen/graphbrainz-extension-discogs",
+  "author": {
+    "name": "Brian Beck",
+    "email": "exogen@gmail.com",
+    "url": "http://brianbeck.com/"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "yarn.lock"
+  ],
+  "scripts": {
+    "build": "npm run build:lib && npm run build:docs",
+    "build:docs": "babel-node scripts/build-docs.js",
+    "build:lib": "babel --out-dir lib src",
+    "clean": "rimraf lib",
+    "deploy": "./scripts/deploy.sh",
+    "format": "npm run lint:fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "precommit": "lint-staged",
+    "prepare": "npm run clean && npm run build",
+    "start": "node scripts/start.js",
+    "start:dev": "nodemon --exec babel-node scripts/start-dev.js",
+    "test": "npm run lint && npm run test:coverage",
+    "test:cache": "cross-env NOCK_MODE=cache ava --concurrency 1 --update-snapshots",
+    "test:coverage": "cross-env NODE_ENV=test nyc npm run test:only",
+    "test:live": "cross-env NOCK_MODE=live ava --concurrency 1",
+    "test:only": "ava",
+    "test:preview": "cross-env NOCK_MODE=preview ava --concurrency 1",
+    "test:record": "cross-env NOCK_MODE=record ava --concurrency 1 --update-snapshots"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "dotenv/config",
+      "babel-register"
+    ],
+    "files": [
+      "src/**/*.test.js",
+      "test"
+    ]
+  },
+  "ava-nock": {
+    "pathFilter": [
+      "([?&](key|secret)=)([^&]*)",
+      "$1*"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "src/**"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "all": true,
+    "cache": true,
+    "sourceMap": false,
+    "instrument": false
+  },
+  "peerDependencies": {
+    "graphbrainz": "^7.3.0"
+  },
+  "dependencies": {
+    "dataloader": "^1.3.0",
+    "debug": "^3.1.0",
+    "disconnect": "^1.2.1",
+    "graphql-relay": "^0.5.3",
+    "lru-cache": "^4.1.1",
+    "qs": "^6.5.1"
+  },
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "ava-nock": "^0.3.1",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "coveralls": "^3.0.0",
+    "cross-env": "^5.1.1",
+    "dotenv": "^4.0.0",
+    "eslint": "^4.11.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "glob": "^7.1.2",
+    "graphbrainz": "^7.3.0",
+    "graphql": "^0.11.7",
+    "graphql-markdown": "^3.2.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "nodemon": "^1.12.1",
+    "nyc": "^11.3.0",
+    "prettier": "prettier/prettier#4b070c3",
+    "rimraf": "^2.6.2"
+  }
+}
