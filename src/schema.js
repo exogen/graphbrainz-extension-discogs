@@ -180,6 +180,8 @@ export default gql`
     lowestPrice(
       # The three-letter currency code for which to retrieve the price. Discogs
       # supports USD, GBP, EUR, CAD, AUD, JPY, CHF, MXN, BRL, NZD, SEK, and ZAR.
+      #
+      # [NOT YET WORKING]
       currency: String
     ): Float
 
@@ -267,6 +269,8 @@ export default gql`
     lowestPrice(
       # The three-letter currency code for which to retrieve the price. Discogs
       # supports USD, GBP, EUR, CAD, AUD, JPY, CHF, MXN, BRL, NZD, SEK, and ZAR.
+      #
+      # [NOT YET WORKING]
       currency: String
     ): Float
 
