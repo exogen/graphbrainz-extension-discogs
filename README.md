@@ -9,6 +9,9 @@ Retrieve information about MusicBrainz entities from [Discogs](https://www.disco
 using the [Discogs API](https://www.discogs.com/developers/). This project has
 no affiliation with Discogs.
 
+**[Try out the live demo!][demo]** :bulb: Use the “Docs” sidebar or the
+documentation below to help construct your query.
+
 To use this extension, install [GraphBrainz](https://github.com/exogen/graphbrainz),
 then:
 
@@ -1258,3 +1261,5 @@ A secondary image representing the item.
 </table>
 
 <!-- END graphql-markdown -->
+
+[demo]: http://graphbrainz-extension-discogs.herokuapp.com/
