@@ -670,7 +670,7 @@ The primary musical genres of the master (e.g. “Electronic”).
 <td valign="top">[<a href="https://github.com/exogen/graphbrainz/docs/types.md#string">String</a>!]!</td>
 <td>
 
-The primary musical styles of the master (e.g. “Techo”, “Minimal”).
+The primary musical styles of the master (e.g. “Techno”, “Minimal”).
 
 </td>
 </tr>
@@ -860,7 +860,7 @@ The primary musical genres of the release (e.g. “Electronic”).
 <td valign="top">[<a href="https://github.com/exogen/graphbrainz/docs/types.md#string">String</a>!]!</td>
 <td>
 
-The primary musical styles of the release (e.g. “Techo”, “Minimal”).
+The primary musical styles of the release (e.g. “Techno”, “Minimal”).
 
 </td>
 </tr>

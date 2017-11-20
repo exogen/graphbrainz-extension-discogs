@@ -170,7 +170,7 @@ export default gql`
     # The primary musical genres of the master (e.g. “Electronic”).
     genres: [String!]!
 
-    # The primary musical styles of the master (e.g. “Techo”, “Minimal”).
+    # The primary musical styles of the master (e.g. “Techno”, “Minimal”).
     styles: [String!]!
 
     # The number of listings the master currently has on the marketplace.
@@ -257,7 +257,7 @@ export default gql`
     # The primary musical genres of the release (e.g. “Electronic”).
     genres: [String!]!
 
-    # The primary musical styles of the release (e.g. “Techo”, “Minimal”).
+    # The primary musical styles of the release (e.g. “Techno”, “Minimal”).
     styles: [String!]!
 
     # The number of listings the release currently has on the marketplace.
