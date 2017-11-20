@@ -47,8 +47,33 @@ This extension can be configured using environment variables:
 
 ## Example Queries
 
+Get community ratings, collection counts, and marketplace info for various
+releases of OK Computer ([try it](http://graphbrainz-extension-discogs.herokuapp.com/?query=%7B%0A%20%20search%20%7B%0A%20%20%20%20releases(query%3A%20%22OK%20Computer%22%2C%20first%3A%205)%20%7B%0A%20%20%20%20%20%20nodes%20%7B%0A%20%20%20%20%20%20%20%20mbid%0A%20%20%20%20%20%20%20%20title%0A%20%20%20%20%20%20%20%20discogs%20%7B%0A%20%20%20%20%20%20%20%20%20%20year%0A%20%20%20%20%20%20%20%20%20%20country%0A%20%20%20%20%20%20%20%20%20%20forSaleCount%0A%20%20%20%20%20%20%20%20%20%20lowestPrice%0A%20%20%20%20%20%20%20%20%20%20community%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20haveCount%0A%20%20%20%20%20%20%20%20%20%20%20%20wantCount%0A%20%20%20%20%20%20%20%20%20%20%20%20rating%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20voteCount%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)):
+
 ```graphql
 {
+  search {
+    releases(query: "OK Computer", first: 5) {
+      nodes {
+        mbid
+        title
+        discogs {
+          year
+          country
+          forSaleCount
+          lowestPrice
+          community {
+            haveCount
+            wantCount
+            rating {
+              voteCount
+              value
+            }
+          }
+        }
+      }
+    }
+  }
 }
 ```
 
