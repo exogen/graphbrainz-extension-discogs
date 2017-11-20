@@ -42,10 +42,10 @@ const middleware = graphbrainz({
 
 This extension can be configured using environment variables:
 
-* **`DISCOGS_CONSUMER_KEY`**: The Discogs consumer key to use. This is required
-  for any fields added by the extension to successfully resolve.
-* **`DISCOGS_CONSUMER_SECRET`**: The Discogs consumer secret to use. This is
-  required for any fields added by the extension to successfully resolve.
+* **`DISCOGS_CONSUMER_KEY`**: The Discogs consumer key to use. This is not strictly
+  required, but will get you more favorable rate limiting.
+* **`DISCOGS_CONSUMER_SECRET`**: The Discogs consumer secret to use. This is not strictly
+  required, but will get you more favorable rate limiting.
 * **`DISCOGS_BASE_URL`**: The base URL at which to access the Discogs API.
   Defaults to `https://api.discogs.com/`.
 * **`DISCOGS_CACHE_SIZE`**: The number of items to keep in the cache. Defaults to
