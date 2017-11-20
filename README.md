@@ -9,8 +9,15 @@ Retrieve information about MusicBrainz entities from [Discogs](https://www.disco
 using the [Discogs API](https://www.discogs.com/developers/). This project has
 no affiliation with Discogs.
 
+The extension works by finding Discogs URLs in an entity’s URL relationships.
+The URL relationship must have the `discogs` type and point to a Discogs entity
+of the appropriate type: `artist` for artists, `label` for labels, `master` for
+release groups, and `release` for releases.
+
 **[Try out the live demo!][demo]** :bulb: Use the “Docs” sidebar or the
 documentation below to help construct your query.
+
+## Installation
 
 To use this extension, install [GraphBrainz](https://github.com/exogen/graphbrainz),
 then:
@@ -31,8 +38,6 @@ const middleware = graphbrainz({
 })
 ```
 
-This extension uses its own cache, separate from the MusicBrainz loader cache.
-
 ## Configuration
 
 This extension can be configured using environment variables:
@@ -47,6 +52,8 @@ This extension can be configured using environment variables:
   `GRAPHBRAINZ_CACHE_SIZE` if defined, or `8192`.
 * **`DISCOGS_CACHE_TTL`**: The number of seconds to keep items in the cache.
   Defaults to `GRAPHBRAINZ_CACHE_TTL` if defined, or `86400000` (one day).
+
+This extension uses its own cache, separate from the MusicBrainz loader cache.
 
 ## Example Queries
 
