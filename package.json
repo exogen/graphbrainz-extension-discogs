@@ -1,6 +1,6 @@
 {
   "name": "graphbrainz-extension-discogs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Discogs GraphQL extension for GraphBrainz.",
   "keywords": [
     "graphbrainz",
