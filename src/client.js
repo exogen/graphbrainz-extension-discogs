@@ -6,7 +6,7 @@ export default class DiscogsClient extends Client {
       consumerKey = process.env.DISCOGS_CONSUMER_KEY,
       consumerSecret = process.env.DISCOGS_CONSUMER_SECRET,
       baseURL = process.env.DISCOGS_BASE_URL || 'https://api.discogs.com/',
-      limit = 60,
+      limit = consumerKey && consumerSecret ? 60 : 25,
       period = 60000,
       ...options
     } = {}
