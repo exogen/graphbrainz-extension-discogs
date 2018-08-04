@@ -21,7 +21,12 @@ export function runQuery(query, variables) {
 
 export function testQuerySnapshot(t, query, variables) {
   return runQuery(query, variables).then(
-    result => t.snapshot(result),
+    result => {
+      if (result.errors) {
+        result.errors.forEach(error => t.log(error))
+      }
+      t.snapshot(result)
+    },
     err => t.snapshot(err)
   )
 }

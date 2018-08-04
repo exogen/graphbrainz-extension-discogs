@@ -707,10 +707,10 @@ The lowest price for the master currently found on the marketplace.
 <td valign="top"><a href="https://github.com/exogen/graphbrainz/docs/types.md#string">String</a></td>
 <td>
 
- The three-letter currency code for which to retrieve the price. Discogs
- supports USD, GBP, EUR, CAD, AUD, JPY, CHF, MXN, BRL, NZD, SEK, and ZAR.
-
- [NOT YET WORKING]
+The three-letter currency code for which to retrieve the price. Discogs
+supports USD, GBP, EUR, CAD, AUD, JPY, CHF, MXN, BRL, NZD, SEK, and ZAR.
+#
+[NOT YET WORKING]
 
 </td>
 </tr>
@@ -899,10 +899,10 @@ The lowest price for the release currently found on the marketplace.
 <td valign="top"><a href="https://github.com/exogen/graphbrainz/docs/types.md#string">String</a></td>
 <td>
 
- The three-letter currency code for which to retrieve the price. Discogs
- supports USD, GBP, EUR, CAD, AUD, JPY, CHF, MXN, BRL, NZD, SEK, and ZAR.
-
- [NOT YET WORKING]
+The three-letter currency code for which to retrieve the price. Discogs
+supports USD, GBP, EUR, CAD, AUD, JPY, CHF, MXN, BRL, NZD, SEK, and ZAR.
+#
+[NOT YET WORKING]
 
 </td>
 </tr>
