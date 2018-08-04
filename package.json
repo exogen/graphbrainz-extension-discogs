@@ -82,7 +82,7 @@
     "instrument": false
   },
   "peerDependencies": {
-    "graphbrainz": "^7.3.0"
+    "graphbrainz": "^8.0.0"
   },
   "dependencies": {
     "dataloader": "^1.4.0",
@@ -94,7 +94,7 @@
   },
   "devDependencies": {
     "ava": "^0.25.0",
-    "ava-nock": "^1.0.0-0",
+    "ava-nock": "^1.0.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-istanbul": "^4.1.6",
     "babel-plugin-syntax-object-rest-spread": "^6.13.0",
@@ -112,9 +112,9 @@
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
     "glob": "^7.1.2",
-    "graphbrainz": "^8.0.0-0",
+    "graphbrainz": "^8.0.0",
     "graphql": "^0.13.2",
-    "graphql-markdown": "^4.0.0-0",
+    "graphql-markdown": "^4.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
     "nodemon": "^1.18.3",

@@ -427,9 +427,9 @@ ava-init@^0.2.0:
     read-pkg-up "^2.0.0"
     write-pkg "^3.1.0"
 
-ava-nock@^1.0.0-0:
-  version "1.0.0-0"
-  resolved "https://registry.yarnpkg.com/ava-nock/-/ava-nock-1.0.0-0.tgz#d8fd02d6647c0f810e3f914235bf73043086b3c7"
+ava-nock@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ava-nock/-/ava-nock-1.0.0.tgz#b887cb605ead48fde0f3ab68d815d5f554c91584"
   dependencies:
     debug "^3.1.0"
     fs-extra "^7.0.0"
@@ -2671,9 +2671,9 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.4, graceful-fs@^4.1.6:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-graphbrainz@^8.0.0-0:
-  version "8.0.0-0"
-  resolved "https://registry.yarnpkg.com/graphbrainz/-/graphbrainz-8.0.0-0.tgz#f0e130771f42e1ebf0033dd83d329ded95b29970"
+graphbrainz@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/graphbrainz/-/graphbrainz-8.0.0.tgz#9a1758320715fb861bd0059f8b7169b92fd06f02"
   dependencies:
     babel-runtime "^6.25.0"
     compression "^1.7.3"
@@ -2695,9 +2695,9 @@ graphbrainz@^8.0.0-0:
     request "^2.87.0"
     retry "^0.12.0"
 
-graphql-markdown@^4.0.0-0:
-  version "4.0.0-0"
-  resolved "https://registry.yarnpkg.com/graphql-markdown/-/graphql-markdown-4.0.0-0.tgz#d42ed38a01655e39bbe51b033d8e7fedcf433f70"
+graphql-markdown@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/graphql-markdown/-/graphql-markdown-4.0.0.tgz#91ef01cf7e080db2f1bcefaa1326854e6377c15c"
   dependencies:
     deep-diff "^1.0.1"
     graphql "^0.13.2"
