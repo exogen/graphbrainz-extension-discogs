@@ -17,9 +17,7 @@ Promise.all([getSchemaJSON(baseSchema), getSchemaJSON(schema)])
       processTypeDiff(type) {
         if (type.description === undefined) {
           type.description = `:small_blue_diamond: *This type has been extended.
-See the [base schema](${
-            baseSchemaURL
-          }) for a description and additional fields.*`
+See the [base schema](${baseSchemaURL}) for a description and additional fields.*`
         }
         return type
       }
